@@ -2,11 +2,42 @@
 
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import headshot from "@/assets/images/Headshot.jpg";
 import github from "@/assets/icons/github.svg";
 import linkedin from "@/assets/icons/linkedin.svg";
 import { motion } from "motion/react";
 import julee from "@/assets/images/julee.jpg";
+import ExperienceCard from "@/components/ExperienceCard";
+import aceny from "@/assets/images/aceny.png";
+import gwn from "@/assets/images/gwn.jpg";
+
+const experiences = [
+  {
+    position: "Project Lead",
+    company: "Alliance for Clean Energy, New York",
+    time: "Jan 2025 - May 2025",
+    description:
+      "As Project Lead, I guided a team of five software developers and a product designer in building a full-stack web application for ACE NY. I structured the project around Agile sprints, promoted a collaborative workflow, and consistently reviewed pull requests to maintain code quality. Acting as the main bridge between the client and development team, I led weekly meetings to translate client needs into actionable goals and kept the project aligned with their vision.",
+    photo: aceny,
+    webLink: "https://ace-ny.vercel.app/",
+  },
+  {
+    position: "Full-Stack Web Developer",
+    company: "Alliance for Clean Energy, New York",
+    time: "Aug 2024 - Dec 2024",
+    description:
+      "In this role, I developed a full-stack React web app in TypeScript that showcased renewable energy projects across New York. I engineered an interactive Google Maps feature with custom markers, significantly improved performance by optimizing image queries, and designed using Styled Components. To enrich the platform’s dataset, I created a Python web scraper that consolidated project information from 1000+ records across multiple state databases.",
+    photo: aceny,
+    webLink: "https://ace-ny.vercel.app/",
+  },
+  {
+    position: "Mobile App Developer",
+    company: "Girls Write Now",
+    time: "Jan 2024 - May 2024",
+    description:
+      "I built an iOS mobile app with Expo Router for Girls Write Now, granting users seamless access to an archive of more than 800 stories. My focus was on creating a smooth authentication flow by connecting the frontend and backend through SQL Supabase and ensuring new users had a frictionless onboarding experience. To elevate usability, I styled the app with React StyleSheets, following a designer’s hi-fidelity prototype to deliver a clean and engaging interface.",
+    photo: gwn,
+  },
+];
 
 export default function Home() {
   return (
@@ -50,7 +81,7 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.7 }} // Smooth timing and slight delay
             >
               {/* Social Media Icons */}
-              <a href="https://github.com/jjstnlee" target="_blank">
+              <a href="https://github.com/jjstnlee/" target="_blank">
                 <Image src={github} alt="GitHub" width={62} height={62} />
               </a>
               <a href="https://www.linkedin.com/in/jjstnlee/" target="_blank">
@@ -68,6 +99,23 @@ export default function Home() {
             style={{ objectFit: "cover" }}
             className="w-[425px] h-[386px] rounded-2xl"
           />
+        </div>
+      </div>
+
+      <div className="bg-julee-blue text-white h-full px-32 py-25 flex flex-col gap-20">
+        <h1 className="text-5xl font-bold text-julee-yellow">experience</h1>
+        <div className="flex flex-col gap-10">
+          {experiences.map((exp, index) => (
+            <ExperienceCard
+              key={index}
+              position={exp.position}
+              company={exp.company}
+              time={exp.time}
+              description={exp.description}
+              photo={exp.photo}
+              webLink={exp.webLink}
+            />
+          ))}
         </div>
       </div>
     </>

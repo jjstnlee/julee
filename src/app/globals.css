@@ -12,6 +12,7 @@
   --font-mono: var(--font-geist-mono);
   --color-julee-blue: #399491;
   --color-julee-grey: #b3b3b3;
+  --color-julee-yellow: #ffe049;
 }
 
 @media (prefers-color-scheme: dark) {
