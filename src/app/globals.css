@@ -10,6 +10,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-julee-blue: #399491;
+  --color-julee-grey: #b3b3b3;
 }
 
 @media (prefers-color-scheme: dark) {
