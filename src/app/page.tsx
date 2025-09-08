@@ -81,7 +81,7 @@ export default function Home() {
                 transition={{ duration: 0.7, delay: 0.2 }} // Smooth timing and slight delay
               >
                 <h1 className="text-5xl font-medium">
-                  Hi, I'm{" "}
+                  Hi, I&apos;m{" "}
                   <span className="text-julee-blue font-bold">Justin Lee</span>
                 </h1>
               </motion.div>
