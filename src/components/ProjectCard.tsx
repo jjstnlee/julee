@@ -37,7 +37,11 @@ export default function ProjectCard({
         <div className="text-white">{description}</div>
 
         {webLink && (
-          <a href={webLink} target="_blank" className="text-blue-500 underline">
+          <a
+            href={webLink}
+            target="_blank"
+            className="text-blue-500 underline w-fit"
+          >
             Visit Website
           </a>
         )}

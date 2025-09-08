@@ -82,7 +82,7 @@ export default function Home() {
               >
                 <h1 className="text-5xl font-medium">
                   Hi, I'm{" "}
-                  <span className="text-julee-blue font-bold">Justin Lee.</span>
+                  <span className="text-julee-blue font-bold">Justin Lee!</span>
                 </h1>
               </motion.div>
 
@@ -93,7 +93,13 @@ export default function Home() {
               >
                 <h2 className="text-3xl text-julee-grey">
                   &mdash; front-end developer, cal student, dog and cat
-                  enthusiast
+                  enthusiast.{" "}
+                  <a
+                    href="mailto:junseo@berkeley.edu"
+                    className="text-julee-blue"
+                  >
+                    junseo@berkeley.edu
+                  </a>
                 </h2>
               </motion.div>
             </div>
