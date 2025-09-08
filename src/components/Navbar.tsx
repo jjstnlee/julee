@@ -5,7 +5,9 @@ export default function Navbar() {
     <nav className="w-full h-20 px-21 py-5 fixed bg-white">
       <div className="flex items-center justify-between text-3xl font-bold">
         <Link href="/">
-          <h1 className="text-5xl font-extrabold">ㅈ ㅅ</h1>
+          <h1 className="text-5xl font-extrabold">
+            <span className="text-julee-blue">ㅈ</span> ㅅ
+          </h1>
         </Link>
         <div className="flex gap-17">
           <Link href="/">home</Link>

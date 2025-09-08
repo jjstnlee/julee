@@ -9,6 +9,9 @@ import julee from "@/assets/images/julee.jpg";
 import ExperienceCard from "@/components/ExperienceCard";
 import aceny from "@/assets/images/aceny.png";
 import gwn from "@/assets/images/gwn.jpg";
+import ProjectCard from "@/components/ProjectCard";
+import weekly from "@/assets/images/weekly.png";
+import cs161 from "@/assets/images/cs161.jpg";
 
 const experiences = [
   {
@@ -36,6 +39,28 @@ const experiences = [
     description:
       "I built an iOS mobile app with Expo Router for Girls Write Now, granting users seamless access to an archive of more than 800 stories. My focus was on creating a smooth authentication flow by connecting the frontend and backend through SQL Supabase and ensuring new users had a frictionless onboarding experience. To elevate usability, I styled the app with React StyleSheets, following a designer’s hi-fidelity prototype to deliver a clean and engaging interface.",
     photo: gwn,
+  },
+];
+
+const projects = [
+  {
+    title: "Weekly",
+    description:
+      "I am developing a full-stack web app that helps people stay connected by sharing weekly update videos within private circles. Using Figma for design and React with Tailwind CSS for implementation, I built a smooth, responsive interface. I integrated Firebase authentication, database, and storage to support user circles, videos, and comments. To improve performance and engagement, I leveraged React Query for real-time post and comment updates, ensuring a seamless flow of communication across the platform.",
+    photo: weekly,
+    time: "July 2025 - Present",
+    techStack:
+      "TypeScript, React, Tailwind CSS, Firebase, TanStack Query, Next.js, Git",
+    webLink: "",
+  },
+  {
+    title: "Secure File Sharing System",
+    description:
+      "I designed and built a secure file-sharing system in Go that provided end-to-end encryption for sensitive data transfers. The system implemented user authentication and file operations with Encrypt-then-MAC and public key encryption, ensuring both confidentiality and integrity. By incorporating cryptographic hashes and digital signatures, I strengthened the system’s ability to verify authenticity and prevent tampering. Through rigorous testing with the Gingko framework, I validated functionality and resilience against malicious attacks, improving overall security by 50%.",
+    photo: cs161,
+    time: "July 2024",
+    techStack: "Go, Gingko, VS Code, Git",
+    webLink: "",
   },
 ];
 
@@ -103,7 +128,7 @@ export default function Home() {
       </div>
 
       <div className="bg-julee-blue text-white h-full px-32 py-25 flex flex-col gap-20">
-        <h1 className="text-5xl font-bold text-julee-yellow">experience</h1>
+        <h1 className="text-5xl font-bold text-white">experience</h1>
         <div className="flex flex-col gap-10">
           {experiences.map((exp, index) => (
             <ExperienceCard
@@ -114,6 +139,23 @@ export default function Home() {
               description={exp.description}
               photo={exp.photo}
               webLink={exp.webLink}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-white text-black h-full px-32 py-25 flex flex-col gap-20">
+        <h1 className="text-5xl font-bold text-julee-blue">projects</h1>
+        <div className="flex flex-col gap-10">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.title}
+              time={project.time}
+              description={project.description}
+              photo={project.photo}
+              webLink={project.webLink}
+              techStack={project.techStack}
             />
           ))}
         </div>
