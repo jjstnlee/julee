@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 export default function ProjectCard({
   title,
@@ -10,7 +10,7 @@ export default function ProjectCard({
 }: {
   title: string;
   description: string;
-  photo: string;
+  photo: string | StaticImageData;
   webLink?: string;
   time: string;
   techStack?: string;

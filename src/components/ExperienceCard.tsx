@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 export default function ExperienceCard({
   position,
@@ -12,7 +12,7 @@ export default function ExperienceCard({
   company: string;
   time: string;
   description: string;
-  photo: string;
+  photo: string | StaticImageData;
   webLink?: string;
 }) {
   return (
